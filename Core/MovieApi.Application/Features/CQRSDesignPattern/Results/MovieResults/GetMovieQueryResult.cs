@@ -1,6 +1,6 @@
 ﻿namespace MovieApi.Application.Features.CQRSDesignPattern.Results.MovieResults
 {
-    public class GetMovieByIdQueryResults
+    public class GetMovieQueryResult
     {
         public int MovieId { get; set; }
         public string Title { get; set; }

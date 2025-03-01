@@ -12,7 +12,7 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers
             _context = context;
         }
 
-        public async void Handle(DeleteMovieCommand command)
+        public async Task Handle(DeleteMovieCommand command)
         {
             var value = await _context.Movies.FindAsync(command.MovieId);
             _context.Movies.Remove(value);
