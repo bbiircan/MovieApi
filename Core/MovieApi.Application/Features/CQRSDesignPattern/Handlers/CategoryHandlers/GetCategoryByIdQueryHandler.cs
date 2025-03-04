@@ -18,6 +18,7 @@ namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandl
             var value = await _context.Categories.FindAsync(query.CategoryId);
             return new GetCategoryByIdQueryResult
             {
+                CategoryId = value.CategoryId,
                 CategoryName = value.CategoryName
             };
         }
