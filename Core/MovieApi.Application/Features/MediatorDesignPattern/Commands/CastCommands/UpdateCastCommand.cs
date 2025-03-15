@@ -1,6 +1,8 @@
-﻿namespace MovieApi.Application.Features.MediatorDesignPattern.Commands.CastCommands
+﻿using MediatR;
+
+namespace MovieApi.Application.Features.MediatorDesignPattern.Commands.CastCommands
 {
-    public class UpdateCastCommand
+    public class UpdateCastCommand : IRequest
     {
         public int CastId { get; set; }
         public string Title { get; set; }
