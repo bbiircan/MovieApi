@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4D18790C-306B-498F-BCA9-B001C83637E4}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.WebAPI", "Presentation\MovieApi.WebAPI\MovieApi.WebAPI.csproj", "{A7E76A3A-78F0-49AC-AA07-5F325B9EFEC7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.Application", "Core\MovieApi.Application\MovieApi.Application.csproj", "{8C8E62F1-7A1A-4C60-8D56-1940418731A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieApi.WebUI", "Frontends\MovieApi.WebUI\MovieApi.WebUI.csproj", "{54338B39-BC4A-4219-87A6-2B66A92FD472}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{8C8E62F1-7A1A-4C60-8D56-1940418731A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C8E62F1-7A1A-4C60-8D56-1940418731A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C8E62F1-7A1A-4C60-8D56-1940418731A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54338B39-BC4A-4219-87A6-2B66A92FD472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54338B39-BC4A-4219-87A6-2B66A92FD472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54338B39-BC4A-4219-87A6-2B66A92FD472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54338B39-BC4A-4219-87A6-2B66A92FD472}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 		{ED7662E7-1008-4396-B15E-42808D654552} = {25274A0F-A6F8-4F08-AB41-8B2A9DD26128}
 		{A7E76A3A-78F0-49AC-AA07-5F325B9EFEC7} = {FA78A31E-9151-47BE-A392-D3B79DA1CE70}
 		{8C8E62F1-7A1A-4C60-8D56-1940418731A9} = {4D18790C-306B-498F-BCA9-B001C83637E4}
+		{54338B39-BC4A-4219-87A6-2B66A92FD472} = {8B45A759-A8CC-4150-B531-3F4D49B22D4D}
 	EndGlobalSection
 EndGlobal
