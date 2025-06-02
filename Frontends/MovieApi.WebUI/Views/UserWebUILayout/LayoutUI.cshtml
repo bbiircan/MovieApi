@@ -13,26 +13,26 @@
 <html lang="en" class="no-js">
 
 <!-- movielist07:38-->
-	@await Component.InvokeAsync("_UserLayoutWebUIHeadComponentPartial");				
+	@await Component.InvokeAsync("_UserLayoutWebUIHeadComponentPartial")				
 
 <body>
 	<!--preloading-->
-	@await Component.InvokeAsync("_UserLayoutWebUIPreloaderComponentPartial");
+	@await Component.InvokeAsync("_UserLayoutWebUIPreloaderComponentPartial")
 	<!--end of preloading-->
 
 	<!--login form popup-->
-	@await Component.InvokeAsync("_UserLayoutWebUILoginModalComponentPartial");
+	@await Component.InvokeAsync("_UserLayoutWebUILoginModalComponentPartial")
 	<!--end of login form popup-->
 
 	<!--signup form popup-->
-	@await Component.InvokeAsync("_UserLayoutWebUIRegisterModalComponentPartial");
+	@await Component.InvokeAsync("_UserLayoutWebUIRegisterModalComponentPartial")
 	<!--end of signup form popup-->
 
 	<!-- BEGIN | Header -->
-	@await Component.InvokeAsync("_UserLayoutWebUINavbarComponentPartial");
+	@await Component.InvokeAsync("_UserLayoutWebUINavbarComponentPartial")
 	<!-- END | Header -->
 
-	@await Component.InvokeAsync("_UserLayoutWebUIHeroComponentPartial");
+	@await Component.InvokeAsync("_UserLayoutWebUIHeroComponentPartial")
 
 	@RenderBody()
 
