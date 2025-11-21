@@ -1,10 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MovieApi.Dto.Dtos.UserRegisterDtos;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace MovieApi.WebUI.Controllers
 {
     public class RegisterController : Controller
     {
+        private readonly IHttpClientFactory _httpClientFactory;
+
+        public RegisterController(IHttpClientFactory httpClientFactory)
+        {
+            _httpClientFactory = httpClientFactory;
+        }
+
         [HttpGet]
         public IActionResult SignUp()
         {
@@ -12,9 +21,21 @@ namespace MovieApi.WebUI.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignUp(CreateUserRegisterDto createUserRegisterDto) 
+        public async Task<IActionResult> SignUp(CreateUserRegisterDto createUserRegisterDto) 
         {
-            return RedirectToAction("SignIn","Login");
+            var client = _httpClientFactory.CreateClient();
+            var jsonData = JsonConvert.SerializeObject(createUserRegisterDto);
+            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var response = await client.PostAsync("https://localhost:7140/api/Registers",stringContent);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("SignIn", "Login");
+
+            }
+            ViewBag.error = "Registration failed, please try again";
+            return View();
+
         }
     }
 }
